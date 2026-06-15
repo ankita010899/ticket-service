@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  ticket-db:
+    image: postgres:15
+    container_name: jira-ticket-db
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=jira_user
+      - POSTGRES_PASSWORD=secret_pass
+      - POSTGRES_DB=jira_tickets_db
